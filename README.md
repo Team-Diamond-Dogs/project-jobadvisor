@@ -24,6 +24,7 @@ El repositorio en Github utiliza una estructura multi-repo, la cual contiene los
 
 - **web**: Contiene el proyecto de la aplicación web que sirve el front end.
 - **api**: Contiene el proyecto de la API REST que sirve como back end para la aplicación web.
+- **scrappers**: Contiene los scripts de scrapping que buscan recomendaciones de cursos para las habilidades requeridas en las ofertas de trabajo.
 
 ## Aplicación web
 
