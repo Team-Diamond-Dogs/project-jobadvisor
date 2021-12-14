@@ -1,6 +1,6 @@
-# JobAdvisor
+# Proyecto: JobAdvisor
 
-## Intro
+## 1. Intro
 
 En las comunidades online del área informática constantemente hemos observado muchas consultas de personas que no saben cuáles son las habilidades requeridas para conseguir un trabajo en el área, o que no saben por dónde comenzar. En el presente proyecto buscamos entregar una solución que oriente a los usuarios respecto a las habilidades y conocimientos que requieren las empresas, en base a las ofertas de empleo publicadas en Get On Board.
 
@@ -10,7 +10,7 @@ Dentro de este contexto, identificamos 4 tipos de usuario que serán el centro d
 - Profesionales del área IT que deseen cambiar de especialización
 - Profesionales del área IT que deseen avanzar en _seniority_ dentro del cargo
 
-## Descripción del proyecto
+## 2. Descripción del proyecto
 
 JobAdvisor es una aplicación web que busca entregar recomendaciones sobre el punto de partida para quienes desean buscar un nuevo trabajo. Analizando las ofertas de trabajo publicadas en Get On Board, te indica cuáles son las habilidades que deberías adquirir/reforzar para encontrar ese puesto que tanto buscas.
 
@@ -21,11 +21,11 @@ Dentro de sus funcionalidades incluye:
 
 Para ambos tipos de búsqueda también se puede incluir el _seniority_ deseado, lo que permite buscar ofertas en el siguiente nivel de tu carrera profesional.
 
-## Demostración
+## 3. Demostración
 
 {Video aquí}
 
-## Estructura del código
+## 4. Estructura del código
 
 El repositorio en Github utiliza una estructura monorepo, la cual contiene los siguientes directorios:
 
@@ -34,18 +34,18 @@ El repositorio en Github utiliza una estructura monorepo, la cual contiene los s
 - **scrappers**: Contiene los scripts de scrapping que buscan recomendaciones de cursos para las habilidades requeridas en las ofertas de trabajo.
 - **data**: Contiene información sobre el schema de base de datos y los scripts SQL para desplegar la db del proyecto.
 
-## Aplicación web
+## 5. Aplicación web
 
 Aplicación de página única (SPA) desarrollada con React, la cual muestra la UI para el usuario final. Se conecta con el backend a través de una API REST, desde la cual obtiene los resultados de búsqueda.
 
-### Dependencias
+### 5.1. Dependencias
 
 Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cuente con el siguiente software:
 
-1. NodeJS
-2. NPM
+1. NodeJS >= v14.16
+2. NPM >= v6.14
 
-### Instalación
+### 5.2. Instalación
 
 1. Clonar el repositorio.
 2. Moverse a la raíz de la carpeta `web/`, ejemplo: `cd /var/www/web`.
@@ -55,11 +55,11 @@ Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cue
 6. Mover la carpeta con el artefacto (paso anterior) al lugar de destino para el sitio web, ejemplo: `mv jobadvisor/ /var/www`.
 7. Configurar el servidor web para que apunte a la carpeta de la aplicación, ejemplo `/var/www/web/jobadvisor`.
 
-## API REST
+## 6. API REST
 
 Lorem ipsum dolor sit amet.
 
-### Dependencias
+### 6.1. Dependencias
 
 Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cuente con el siguiente software:
 
@@ -67,36 +67,29 @@ Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cue
 2. Bar
 3. Baz
 
-### Instalación
+### 6.2. Instalación
 
 1. Foo
 2. Bar
 3. Baz
 
-### Ejecución
+## 7. Scrappers
 
-1. Foo
-2. Bar
-3. Baz
-
-
-## Scrappers
-
-### Platzi
+### 7.1. Platzi
 
 Lorem ipsum
 
-#### Instrucciones de uso
+#### 7.1.1. Instrucciones de uso
 
 1. Foo
 2. Bar
 3. Baz
 
-### Udemy
+### 7.2. Udemy
 
 Scrapper que lee los cursos recomendados para un tema en particular y los almacena en la tabla `tag_courses` de la base de datos.
 
-#### Instrucciones de uso
+#### 7.2.1. Instrucciones de uso
 
 1. Foo
 2. Bar
