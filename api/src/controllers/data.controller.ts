@@ -7,9 +7,7 @@ export class DataController {
   constructor(
     @Inject('JOBS_SERVICE') private jobsService: JobsService,
     private readonly coursesService: CourseService,
-  ) {
-    console.log({ jobsService, coursesService });
-  }
+  ) {}
 
   @Get('/seniorities')
   getSeniorities() {

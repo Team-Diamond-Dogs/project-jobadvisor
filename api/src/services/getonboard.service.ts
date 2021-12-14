@@ -14,7 +14,7 @@ export class GetOnBoardService implements JobsService {
   async getTags(): Promise<any> {
     const response = await lastValueFrom(
       this.httpService
-        .get('https://www.getonbrd.com/api/v0/tags', {
+        .get(`${this.endpointUrl}/tags`, {
           headers: {
             Accept: 'application/json',
           },
@@ -26,8 +26,8 @@ export class GetOnBoardService implements JobsService {
       if (element.attributes.keywords !== '' && element.attributes.keywords) {
         const filterElement = element.attributes.keywords
           .split(',')
-          .map((value) => value.trim())
-          .filter((value) => value);
+          .map((value: string) => value.trim())
+          .filter((value: any) => value);
         filter.push(...filterElement);
       }
     });
@@ -35,7 +35,7 @@ export class GetOnBoardService implements JobsService {
   }
   async getSeniorities(): Promise<any> {
     return this.httpService
-      .get('https://www.getonbrd.com/api/v0/seniorities', {
+      .get(`${this.endpointUrl}seniorities`, {
         headers: {
           Accept: 'application/json',
         },
@@ -44,7 +44,7 @@ export class GetOnBoardService implements JobsService {
   }
   async getModalities(): Promise<any> {
     return this.httpService
-      .get('https://www.getonbrd.com/api/v0/modalities', {
+      .get(`${this.endpointUrl}/modalities`, {
         headers: {
           Accept: 'application/json',
         },
@@ -53,7 +53,7 @@ export class GetOnBoardService implements JobsService {
   }
 
   async getJobsByKeyword(keyword: string): Promise<any> {
-    const endpointComplete = `${this.endpointUrl}/jobs?query=${keyword}&expand=["tags"]`;
+    const endpointComplete = `${this.endpointUrl}/search/jobs?query=${keyword}&expand=["tags"]`;
     let page = 1;
     const jobsList = [];
     while (true) {
