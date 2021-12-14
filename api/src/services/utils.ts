@@ -12,6 +12,19 @@ export const countTagNamesFromJobs = (jobs: Job[]) => {
             }
         }
     }
-    return Object.fromEntries(new Map([...tagsReps.entries()].sort((a, b) => b[1] - a[1])));
-    
+
+    return [...tagsReps.entries()]
+            .sort((a, b) => b[1] - a[1])
+            .map(tag => {
+                const [name, frequency] = [tag[0], tag[1]];
+                return {
+                    name,
+                    frequency,
+                    courses: getCoursesFromTagName(name)
+                }
+            });
+}
+
+const getCoursesFromTagName = (tagName: string) => {
+    return [];// TODO: 
 }
