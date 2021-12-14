@@ -20,7 +20,7 @@ Lorem ipsum dolor sit amet.
 
 ## Estructura del código
 
-El repositorio en Github utiliza una estructura multi-repo, la cual contiene los siguientes directorios:
+El repositorio en Github utiliza una estructura monorepo, la cual contiene los siguientes directorios:
 
 - **web**: Contiene el proyecto de la aplicación web que sirve el front end.
 - **api**: Contiene el proyecto de la API REST que sirve como back end para la aplicación web.
