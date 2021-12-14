@@ -19,7 +19,7 @@ function SearchByJobForm(props) {
         const api = new SearchAPI();
         api.searchJob(jobName, seniority)
             .then((data) => {
-                navigate("job-results", { replace: true, state: data });
+                navigate("job-results", { replace: false, state: { term: jobName, results: data } });
             });
     }
 
