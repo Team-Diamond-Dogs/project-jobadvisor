@@ -12,7 +12,7 @@ COLLATE=utf8mb4_general_ci;
 
 
 CREATE TABLE tag_courses (
-	`id` INTEGER NOT NULL,
+	`id` INTEGER auto_increment NOT NULL,
 	`tag_id` INTEGER NOT NULL,
 	`name` varchar(200) NOT NULL,
 	`url` varchar(200) NOT NULL,
