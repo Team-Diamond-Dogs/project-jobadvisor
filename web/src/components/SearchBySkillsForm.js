@@ -36,7 +36,7 @@ function SearchBySkillsForm(props) {
         const api = new SearchAPI();
         api.searchSkill(selectedSkills, seniority)
             .then((data) => {
-                navigate("skill-results", { replace: true, state: data });
+                navigate("skill-results", { replace: false, state: data });
             });
     }
 
