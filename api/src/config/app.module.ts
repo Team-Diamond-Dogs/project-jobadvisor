@@ -7,9 +7,11 @@ import { CourseService } from 'src/services/interfaces/course-service.interface'
 import { JobsService } from 'src/services/interfaces/jobs-service.interface';
 import { HttpModule, HttpService } from '@nestjs/axios';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { DataController } from 'src/controllers/data.controller';
 
 @Module({
-  imports: [HttpModule, 
+  imports: [
+    HttpModule,
     ConfigModule.forRoot({ isGlobal: true }),
     // TypeOrmModule.forRoot({
     //   type: 'mysql',
@@ -22,17 +24,17 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     //   synchronize: true,
     // }),
   ],
-  controllers: [JobsController],
+  controllers: [JobsController, DataController],
   providers: [
     DDogsCourseService,
     {
-    provide: 'JOBS_SERVICE',
-    inject: [HttpService, ConfigService],
-    useFactory: (httpService: HttpService, config: ConfigService) =>
-      new GetOnBoardService(
-        config.get<string>('JOBS_SERVICE_URL'),
-        httpService,
-      ),
+      provide: 'JOBS_SERVICE',
+      inject: [HttpService, ConfigService],
+      useFactory: (httpService: HttpService, config: ConfigService) =>
+        new GetOnBoardService(
+          config.get<string>('JOBS_SERVICE_URL'),
+          httpService,
+        ),
     },
     {
       provide: CourseService,
@@ -41,7 +43,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     {
       provide: JobsService,
       useClass: GetOnBoardService,
-    }
+    },
   ],
   exports: ['JOBS_SERVICE'],
 })
