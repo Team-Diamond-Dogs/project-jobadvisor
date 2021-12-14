@@ -3,9 +3,11 @@ import mock_job_search from './mock-job-search';
 import mock_skills from "./mock-skills";
 import mock_skill_search from './mock-skill-search';
 
-const api_url = "http://localhost:3000/api";
-
 class SearchAPI {
+    constructor() {
+        this.api_url = process.env.REACT_APP_API_BASE_URL;
+    }
+
     async searchJob(jobName, seniority = null) {
         if (jobName === undefined || jobName === null || jobName === "") {
             throw new Error("Se debe especificar un término para el nombre del cargo.");
@@ -15,9 +17,9 @@ class SearchAPI {
         if (seniority !== undefined && seniority !== null) {
             queryParams["seniority"] = seniority;
         }
-
+        
         /*
-        const response = await axios.get(`${api_url}/search`, { params: queryParams });
+        const response = await axios.get(`${this.api_url}/search`, { params: queryParams });
 
         return response.data;
         */
@@ -31,7 +33,7 @@ class SearchAPI {
         }
 
         /*
-        const response = await axios.get(`${api_url}/search`);
+        const response = await axios.get(`${this.api_url}/search`);
 
         return response.data;
         */
