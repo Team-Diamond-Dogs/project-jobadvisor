@@ -14,3 +14,4 @@ Modelo que representa los cursos que están relacionados con un "Tag" en especí
 | url | varchar | not null | URL del curso | |
 | thumbnail_url | varchar | not null | URL de la imagen que se usará como thumbnail en la UI | |
 | priority | smallint | not null, default (0) | Número de prioridad usado para ordenar las recomendaciones, de menor a mayor | Números enteros del 0 al 10 |
+| platform | varchar | not null | Plataforma desde la cual se obtuvo la referencia al curso. Se almacena en minúsculas. | platzi, udemy |

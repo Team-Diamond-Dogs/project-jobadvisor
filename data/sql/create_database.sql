@@ -18,6 +18,7 @@ CREATE TABLE tag_courses (
 	`url` varchar(200) NOT NULL,
 	`thumbnail_url` varchar(200) NOT NULL,
 	`priority` SMALLINT DEFAULT 0 NOT NULL,
+	`platform` varchar(50) NOT NULL,
 	CONSTRAINT tag_courses_PK PRIMARY KEY (id),
 	CONSTRAINT tag_courses_FK FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
 )
