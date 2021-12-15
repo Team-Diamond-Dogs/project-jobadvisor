@@ -21,6 +21,9 @@ Dentro de sus funcionalidades incluye:
 
 - Búsqueda por cargo: Te permite indicar un cargo o término relacionado al cargo (ej. "Backend") y te indica cuáles son las habilidades más solicitadas por las empresas que han publicado ofertas asociadas a la búsqueda.
 
+![image](https://user-images.githubusercontent.com/800655/146118758-3c84eb61-ca29-4ef0-9632-4e5d3cadf5d4.png)
+
+
 ## 3. Demostración
 
 https://user-images.githubusercontent.com/800655/146117261-832e91cd-8e11-4213-bee5-8d3134464436.mov
