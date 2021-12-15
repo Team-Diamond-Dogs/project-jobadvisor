@@ -48,49 +48,39 @@ Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cue
 ### 5.2. Instalación
 
 1. Clonar el repositorio.
-2. Moverse a la raíz de la carpeta `web/`, ejemplo: `cd /var/www/web`.
+2. Moverse a la raíz de la carpeta `web/`.
 3. Instalar las dependencias del proyecto con el comando `npm install`.
-4. Crear una build de producción con el comando `npm run build`.
-5. Modificar el nombre de la carpeta `build/` por otro que identifique a la aplicación, ejemplo: `jobadvisor/`
-6. Mover la carpeta con el artefacto (paso anterior) al lugar de destino para el sitio web, ejemplo: `mv jobadvisor/ /var/www`.
-7. Configurar el servidor web para que apunte a la carpeta de la aplicación, ejemplo `/var/www/web/jobadvisor`.
+4. Ejecutar la aplicación en modo de desarrollo con el comando `npm start`.
+
 
 ## 6. API REST
 
-Lorem ipsum dolor sit amet.
+API desarrollada sobre NestJS que alimenta a la aplicación web de JobAdvisor y consume 
 
 ### 6.1. Dependencias
 
 Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cuente con el siguiente software:
 
-1. Foo
-2. Bar
-3. Baz
+1. NodeJS >= v14.16
+2. NPM >= v6.14
+
 
 ### 6.2. Instalación
 
-1. Foo
-2. Bar
-3. Baz
+1. Clonar el repositorio.
+2. Moverse a la raíz de la carpeta `api/`.
+3. Instalar las dependencias del proyecto con el comando `npm install`.
+4. Ejecutar la aplicación en modo de desarrollo con el comando `npm start:dev`.
+
 
 ## 7. Scrappers
 
-### 7.1. Platzi
-
-Lorem ipsum
-
-#### 7.1.1. Instrucciones de uso
-
-1. Foo
-2. Bar
-3. Baz
-
-### 7.2. Udemy
+### 7.1. Udemy
 
 Scrapper que lee los cursos recomendados para un tema en particular y los almacena en la tabla `tag_courses` de la base de datos.
 
 #### 7.2.1. Instrucciones de uso
 
-1. Foo
-2. Bar
-3. Baz
+1. Instalar las dependencias especificadas en el archivo `requirements.txt`, con el comando `pip install -r requirements.txt`. Se recomienda usar un ambiente virtual, por ejemplo, usando `venv`.
+2. Configurar la conexión a la base de datos en el archivo `.env`.
+3. Invocar el script desde la línea de comandos: `python udemy_scrapper.py "Python"`
