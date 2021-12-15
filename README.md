@@ -1,5 +1,8 @@
 # Proyecto: JobAdvisor
 
+![image](https://user-images.githubusercontent.com/800655/146115054-1654fb41-f742-4ac9-92d6-1bd5cd63334c.png)
+
+
 ## 1. Intro
 
 En las comunidades online del área informática constantemente hemos observado muchas consultas de personas que no saben cuáles son las habilidades requeridas para conseguir un trabajo en el área, o que no saben por dónde comenzar. En el presente proyecto buscamos entregar una solución que oriente a los usuarios respecto a las habilidades y conocimientos que requieren las empresas, en base a las ofertas de empleo publicadas en Get On Board.
