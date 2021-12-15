@@ -17,9 +17,6 @@ JobAdvisor es una aplicación web que busca entregar recomendaciones sobre el pu
 Dentro de sus funcionalidades incluye:
 
 - Búsqueda por cargo: Te permite indicar un cargo o término relacionado al cargo (ej. "Backend") y te indica cuáles son las habilidades más solicitadas por las empresas que han publicado ofertas asociadas a la búsqueda.
-- Búsqueda por habilidades: Te permite seleccionar las habilidades que ya posees y te indica cuan solicitada es esa habilidad en el mercado laboral, y las categorías en las que esa habilidad está presente.
-
-Para ambos tipos de búsqueda también se puede incluir el _seniority_ deseado, lo que permite buscar ofertas en el siguiente nivel de tu carrera profesional.
 
 ## 3. Demostración
 
