@@ -2,7 +2,7 @@ CREATE TABLE tags (
 	`id` INTEGER auto_increment NOT NULL,
 	`name` varchar(100) NOT NULL,
 	`value` varchar(100) NOT NULL,
-	`keywords` varchar(200) NULL,
+	`keywords` text NULL,
 	`is_skill` BOOL DEFAULT 1 NULL,
 	CONSTRAINT tags_PK PRIMARY KEY (id)
 )

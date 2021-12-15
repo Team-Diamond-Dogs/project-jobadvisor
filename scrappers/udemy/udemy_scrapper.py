@@ -19,6 +19,13 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from sqlalchemy import create_engine
 
+def main(search_terms):
+    try:
+        load_dotenv()
+        get_data(search_terms, False)
+    except Exception as e:
+        print("Ocurrio un error al ejecutar el scrapper. %s" % str(e) )
+
 def get_database_engine():
     db_user = os.getenv("MYSQL_USER")
     db_pass = os.getenv("MYSQL_PASSWORD")
@@ -93,9 +100,6 @@ def get_data(search_terms, headless_mode=True):
 
 
 if __name__ == "__main__":
-    try:
-        load_dotenv()
-        search_terms = sys.argv[1]
-        get_data(search_terms, False)
-    except Exception as e:
-        print("Ocurrio un error al ejecutar el scrapper. %s" % str(e) )
+    search_terms = sys.argv[1]
+    main(search_terms)
+    
