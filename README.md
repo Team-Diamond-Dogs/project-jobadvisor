@@ -79,7 +79,7 @@ Para la ejecución del proyecto, se requerirá que el ambiente de ejecución cue
 
 Scrapper que lee los cursos recomendados para un tema en particular y los almacena en la tabla `tag_courses` de la base de datos.
 
-#### 7.2.1. Instrucciones de uso
+#### 7.1.1. Instrucciones de uso
 
 1. Instalar las dependencias especificadas en el archivo `requirements.txt`, con el comando `pip install -r requirements.txt`. Se recomienda usar un ambiente virtual, por ejemplo, usando `venv`.
 2. Configurar la conexión a la base de datos en el archivo `.env`.
