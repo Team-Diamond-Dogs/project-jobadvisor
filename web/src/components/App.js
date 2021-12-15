@@ -43,7 +43,9 @@ function App() {
                     alignItems: 'center',
                 }}
                 >
-                    <Typography variant="h1">JobAdvisor</Typography>
+                    <Typography variant="h1">
+                        <Link href="/" underline="none" color="inherit">JobAdvisor</Link>
+                    </Typography>
                     <Box sx={{
                         marginTop: 8,
                         marginBottom: 8

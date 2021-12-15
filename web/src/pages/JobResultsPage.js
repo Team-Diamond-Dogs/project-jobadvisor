@@ -35,7 +35,7 @@ function JobResultsPage(props) {
                             marginBottom: 4 }}>
                         <Box sx={{ display: "flex", flexDirection: "column" }}>
                             <CardContent sx={{ flex: "1 0 auto" }}>
-                                <Link href={course.url} underline="none" target={"_blank"}>
+                                <Link href={course.url} underline="none" target="_blank" rel="noreferrer">
                                     <Typography component="div" variant="h5">
                                         {course.name}
                                     </Typography>

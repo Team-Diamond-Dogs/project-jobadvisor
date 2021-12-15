@@ -32,22 +32,22 @@ function SearchByJobForm(props) {
             flexDirection: 'column',
             alignItems: 'center',
         }}>
-            <Typography></Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <p>Para comenzar, escribe el nombre del cargo al cual te gustaría postular.</p>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, width: "100%" }}>
                 <Grid container spacing={2}>
-                <Grid item xs={12}>
-                    <FormLabel component="legend">Nombre del cargo</FormLabel>
-                    <TextField
-                        autoComplete="Nombre del cargo a buscar..."
-                        name="job"
-                        required
-                        fullWidth
-                        id="job"
-                        value={jobName}
-                        onChange={handleJobNameChange}
-                        autoFocus
-                    />
-                </Grid>
+                    <Grid item md={12}>
+                        <FormLabel component="legend">Nombre del cargo</FormLabel>
+                        <TextField
+                            autoComplete="Nombre del cargo a buscar..."
+                            name="job"
+                            required
+                            fullWidth
+                            id="job"
+                            value={jobName}
+                            onChange={handleJobNameChange}
+                            autoFocus
+                        />
+                    </Grid>
                 </Grid>
                 <Button
                     type="submit"
