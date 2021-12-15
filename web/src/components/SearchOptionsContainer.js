@@ -25,14 +25,10 @@ function SearchOptionsContainer (props) {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="Opciones de búsqueda">
                     <Tab label="Buscar por cargo" {...a11yProps(0)} />
-                    <Tab label="Buscar por habilidades" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
                 <SearchByJobForm></SearchByJobForm>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <SearchBySkillsForm></SearchBySkillsForm>
             </TabPanel>
         </Box>
     );
