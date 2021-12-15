@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Link, ListItem, Stack, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia, Link, ListItem, Stack, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
  
@@ -8,6 +8,7 @@ function JobResultsPage(props) {
 
     return (
         <Box>
+            <Button href="/">Volver</Button>
             <Box sx={{marginBottom: 8}}>
                 <p style={{fontSize: "2rem"}}>Encontramos <strong>{state.results.jobs_count} ofertas de trabajo</strong> para los cargos relacionados a <strong>{state.term}</strong>.</p>
                 <p>En estas ofertas, las empresas buscan las siguientes habilidades:</p>

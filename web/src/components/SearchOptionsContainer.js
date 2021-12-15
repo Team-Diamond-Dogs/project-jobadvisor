@@ -4,7 +4,7 @@ import { Tabs } from '@mui/material';
 import { Tab } from '@mui/material';
 import TabPanel from './TabPanel';
 import SearchByJobForm from './SearchByJobForm';
-import SearchBySkillsForm from './SearchBySkillsForm';
+
 
 function a11yProps(index) {
     return {

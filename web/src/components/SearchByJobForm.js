@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { Grid } from "@mui/material";
 import { TextField } from "@mui/material";
 import { FormLabel } from "@mui/material";
@@ -32,7 +32,10 @@ function SearchByJobForm(props) {
             flexDirection: 'column',
             alignItems: 'center',
         }}>
-            <p>Para comenzar, escribe el nombre del cargo al cual te gustaría postular.</p>
+            <p>
+                Para comenzar, escribe el nombre del cargo al cual te gustaría postular. Te indicaremos cuáles habilidades podrías adquirir/reforzar para
+                mejorar tus probabilidades de obtener el trabajo.
+            </p>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, width: "100%" }}>
                 <Grid container spacing={2}>
                     <Grid item md={12}>
