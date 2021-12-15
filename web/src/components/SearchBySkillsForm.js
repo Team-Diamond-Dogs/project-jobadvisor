@@ -11,7 +11,6 @@ import { MenuItem } from "@mui/material";
 import { Chip } from "@mui/material";
 import { OutlinedInput } from "@mui/material";
 import SearchAPI from "../api/SearchAPI";
-import SeniorityFormControl from "./SeniorityFormControl";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -28,13 +27,12 @@ function SearchBySkillsForm(props) {
     const navigate = useNavigate();
     const [skillsList, setSkillsList] = useState([]);
     const [selectedSkills, setSelectedSkills] = useState([]);
-    const [seniority, setSeniority] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const api = new SearchAPI();
-        api.searchSkill(selectedSkills, seniority)
+        api.searchSkill(selectedSkills)
             .then((data) => {
                 navigate("skill-results", { replace: false, state: data });
             });
@@ -49,10 +47,6 @@ function SearchBySkillsForm(props) {
             typeof value === 'string' ? value.split(',') : value,
         );
     };
-
-    const handleSeniorityChange = (event, newValue) => {
-        setSeniority(newValue);
-    }
 
     useEffect(() => {
         const api = new SearchAPI();
@@ -96,9 +90,6 @@ function SearchBySkillsForm(props) {
                             ))}
                             </Select>
                         </FormControl>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <SeniorityFormControl onChange={handleSeniorityChange} value={seniority}></SeniorityFormControl>
                     </Grid>
                 </Grid>
                 <Button

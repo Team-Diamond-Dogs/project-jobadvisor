@@ -5,19 +5,17 @@ import { Grid } from "@mui/material";
 import { TextField } from "@mui/material";
 import { FormLabel } from "@mui/material";
 import { Button } from "@mui/material";
-import SeniorityFormControl from "./SeniorityFormControl";
 import SearchAPI from "../api/SearchAPI";
 
 function SearchByJobForm(props) {
     const navigate = useNavigate();
     const [jobName, setJobName] = useState("");
-    const [seniority, setSeniority] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const api = new SearchAPI();
-        api.searchJob(jobName, seniority)
+        api.searchJob(jobName)
             .then((data) => {
                 navigate("job-results", { replace: false, state: { term: jobName, results: data } });
             });
@@ -25,10 +23,6 @@ function SearchByJobForm(props) {
 
     const handleJobNameChange = (event) => {
         setJobName(event.target.value);
-    }
-
-    const handleSeniorityChange = (event, newValue) => {
-        setSeniority(newValue);
     }
 
     return (
@@ -53,9 +47,6 @@ function SearchByJobForm(props) {
                         onChange={handleJobNameChange}
                         autoFocus
                     />
-                </Grid>
-                <Grid item xs={12}>
-                    <SeniorityFormControl onChange={handleSeniorityChange} value={seniority}></SeniorityFormControl>
                 </Grid>
                 </Grid>
                 <Button
