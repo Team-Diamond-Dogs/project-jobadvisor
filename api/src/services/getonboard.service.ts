@@ -69,9 +69,8 @@ export class GetOnBoardService implements JobsService {
 
       page++;
     }
-    return {
-      jobs_count: jobsList.length,
-      tags_ranking: countTagNamesFromJobs(jobsList),
-    };
+    return jobsList;
   }
+
+  
 }
