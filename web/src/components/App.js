@@ -34,7 +34,7 @@ function Copyright(props) {
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Container component="main" maxWidth="sm">
+            <Container component="main" maxWidth="md">
                 <CssBaseline />
                 <Box sx={{
                     marginTop: 8,
