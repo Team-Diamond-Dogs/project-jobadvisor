@@ -1,7 +1,7 @@
 import { Job } from "src/domain/job.domain";
 
 export const countTagNamesFromJobs = (jobs: Job[]) => {
-    const tagsReps = new Map<string, number>();
+    let tagsReps = new Map<string, number>();
 
     for(let job of jobs){
         for(let tag of job.attributes.tags.data){
@@ -20,11 +20,7 @@ export const countTagNamesFromJobs = (jobs: Job[]) => {
                 return {
                     name,
                     frequency,
-                    courses: getCoursesFromTagName(name)
+                    courses: []
                 }
             });
-}
-
-const getCoursesFromTagName = (tagName: string) => {
-    return [];// TODO: 
 }
